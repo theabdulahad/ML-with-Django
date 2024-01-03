@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Result Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add your own stylesheet or link to a CSS framework here if needed -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .result {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007bff; /* Change the color according to your preference */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Miles per gallon</h1>
+        <div class="result">
+            MPG of your Vehicle is  {{ ans }}
+        </div>
+    </div>
+    <p></p>
+    <a href="{% url 'home' %}">Click here to go back to home </a>
+</body>
+</html>

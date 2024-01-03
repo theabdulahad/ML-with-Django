@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Details Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom styles -->
+    <style>
+        body {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Car Details Form</h1>
+        <form action="{% url 'result' %}" method="post" class="needs-validation" novalidate>
+
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="cylinder">Cylinder:</label>
+                <input type="number" class="form-control" id="cylinder" name="cylinder" required>
+            </div>
+
+            <div class="form-group">
+                <label for="displacement">Displacement:</label>
+                <input type="number" class="form-control" id="displacement" name="displacement" required>
+            </div>
+
+            <div class="form-group">
+                <label for="horsepower">Horsepower:</label>
+                <input type="number" class="form-control" id="horsepower" name="horsepower" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight:</label>
+                <input type="number" class="form-control" id="weight" name="weight" required>
+            </div>
+
+            <div class="form-group">
+                <label for="acc">Acceleration:</label>
+                <input type="number" step="0.01" class="form-control" id="acc" name="acc" required>
+            </div>
+
+            <div class="form-group">
+                <label for="model_year">Model Year:</label>
+                <input type="number" class="form-control" id="model_year" name="model_year" required>
+            </div>
+
+            <div class="form-group">
+                <label for="origin">Origin:</label>
+                <input type="number" class="form-control" id="origin" name="origin" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
